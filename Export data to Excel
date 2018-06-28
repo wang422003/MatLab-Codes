@@ -1,0 +1,13 @@
+%%Export to excel
+clear all;
+load Features_4.mat;
+filename = 'Features_4_new.xlsx'; %File name here
+
+xlRange = 'A2';
+xlswrite(filename,Input_fft,'Input_fft',xlRange); %xlswrite(filename, Variable, sheet = '', xlRange)
+xlswrite(filename,Input_sequenze,'Input_sequenze',xlRange);
+xlswrite(filename,Input_stat,'Input_stat',xlRange);
+xlswrite(filename,Output,'Output',xlRange);
+xlswrite(filename,Output_klass,'Output_klass',xlRange);
+
+%Also suited for matrices
